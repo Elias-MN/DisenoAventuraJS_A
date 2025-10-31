@@ -17,20 +17,6 @@ body{
   grid-template-rows: auto 1fr auto;
 }
 
-main{
-  margin: 64px;
-}
-
-main>div{
-  height: 100%;
-  background-color: blue;
-}
-
-#scene-1{
-  display: flex;
-  justify-content: center;
-}
-
 footer, header{
   display: flex;
   justify-content: center;
@@ -44,26 +30,40 @@ footer, header{
   gap: 4px;
 }
 
-.item{
-  background-color: var(--secondary-color);
-  /* aspect-ratio: 1 / 1; */
-  border: 1px solid black;
-  width: 100px;
-}
+  .item{
+    background-color: var(--secondary-color);
+    border: 1px solid black;
+    width: 100px;
+  }
 
-.item img{
-  width: 100%;
-}
-
-.img-container{
-  width: 100px;
-}
-
-  .img-container>img{
+  .item img{
     width: 100%;
   }
 
-#scene-1-container{
+  .img-container{
+    width: 100px;
+  }
+
+    .img-container>img{
+      width: 100%;
+    }
+
+/* --------------- CONTENIDO DE LAS ESCENAS --------------- */
+
+main{
+  margin: 64px;
+}
+
+main>div{
+  height: 100%;
+}
+
+#scene-1, #scene-2{
+  display: flex;
+  justify-content: center;
+}
+
+#scene-1-container, #scene-2-container{
   width: 100%;
 }
 
@@ -72,38 +72,52 @@ footer, header{
   background: var(--primary-color);
 }
 
-.row-1{
+#scene-1 .row-1{
   height: 40%;
   display: flex;
   justify-content: space-between;
   background: var(--secondary-color);
 }
 
-.row-2{
-  height: 50%;
+#scene-1 .row-2{
+  height: 40%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 8px;
 }
 
-  .row-2:nth-child(3), .row-2:nth-child(4){
+  #scene-1 .row-2:nth-child(3), #scene-1 .row-2:nth-child(4){
     grid-row-start: 2;
   }
 
-  .stats{
+  #scene-1 .stats{
     background: var(--secondary-color);
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-.row-3{
-  height: 10%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  #scene-1 .row-3{
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #scene-2 .row-1{
+    height: 80%;
+  }
+
+  #scene-2 .row-2{
+    height: 20%;
+  }
+
+  #scene-2 .row-1 .card{
+    width: 100px;
+    height: 100px;
+    background: gray;
+  }
 
 
 
